@@ -31,7 +31,21 @@ public class AveTempCalc {
         tempArray[4]= scanner.nextDouble();
         scanner.nextLine();
 
+        double aveTemp;
+
+        aveTemp = Arrays.stream(tempArray).sum()/tempArray.length;
+
+        for (int i = 0; i < 5; i++) {
+            if (aveTemp > tempArray[i]) {
+                System.out.println("The " + i + "Temperature enterered is lower than the average temperature of " + aveTemp + "." );
+            }
+        }
+
+
         System.out.println(Arrays.toString(tempArray));
+        System.out.println(aveTemp);
+
+
 
 
     }
