@@ -21,7 +21,7 @@ public class AveTempCalc {
         return tempCount;
 
     }
-
+    //Needs error handling, added toUpperCase but needs a while loop...
     public static String unitOfTemp() {
         System.out.println("What unit of Temperature are the readings in, C or F?");
         String tempUnit = scanner.next().toUpperCase();
@@ -72,7 +72,8 @@ public class AveTempCalc {
 
 
     public static void main(String[] args){
-
+        // Output built up over a few edits, some of it reads awkwardly, would revise and put it all in a 'if' statement to
+        // seperate the unit logic, an output for C and a seperate for F.
         int tempCount = numberOfTemps();
         String tempUnit = unitOfTemp();
         double[] tempArray = inputTemp(tempCount);
