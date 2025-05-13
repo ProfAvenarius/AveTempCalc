@@ -65,7 +65,7 @@ public class AveTempCalc {
     public static void compareWithAveTemp(String unitTemp, double[] temps, double ave) {
         for (int i = 0; i < temps.length; i++) {
             if (ave > temps[i]) {
-                System.out.println("The temperature " + temps[i] + unitTemp + ", the" + (i+1) + "/" + temps.length + " entry on the list is lower than the average temperature of " + ave + unitTemp + "." );
+                System.out.println("The temperature " + temps[i] + unitTemp + ", the " + (i+1) + "/" + temps.length + " entry on the list is lower than the average temperature of " + ave + unitTemp + "." );
             }
         }
     }
