@@ -8,10 +8,12 @@
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class AveTempCalc {
 
     private static Scanner scanner = new Scanner(System.in);
+    private static DecimalFormat df = new DecimalFormat("0.0");
 
 
     public static int numberOfTemps() {
@@ -65,7 +67,7 @@ public class AveTempCalc {
     public static void compareWithAveTemp(String unitTemp, double[] temps, double ave) {
         for (int i = 0; i < temps.length; i++) {
             if (ave > temps[i]) {
-                System.out.println("The temperature " + temps[i] + unitTemp + ", the " + (i+1) + "/" + temps.length + " entry on the list is lower than the average temperature of " + ave + unitTemp + "." );
+                System.out.println("The temperature " + df.format(temps[i]) + unitTemp + ", the " + (i+1) + "/" + temps.length + " entry on the list is lower than the average temperature of " + ave + unitTemp + "." );
             }
         }
     }
@@ -87,7 +89,8 @@ public class AveTempCalc {
         }
 
         double aveTemp =calculateAveTemp(tempArray);
-        System.out.println("The average temperature from this list is: " + aveTemp + tempUnit);
+
+        System.out.println("The average temperature from this list is: " + df.format(aveTemp) + tempUnit);
         compareWithAveTemp(tempUnit, tempArray, aveTemp);
     }
 }
